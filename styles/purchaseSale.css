@@ -1,0 +1,36 @@
+.purchaseSale {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .percentsWrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+
+        .percent {
+            background-color: transparent;
+            width: 100%;
+            text-align: center;
+            border: 1px solid var(--light-grey);
+            border-radius: 10px;
+            padding: 5px;
+            cursor: pointer;
+
+            &.active {
+                background: var(--main-blue);
+                border-color: var(--main-blue);
+                color: var(--white);
+            }
+            &:focus{
+                outline-width: 0;
+                border: 1px solid var(--dark-grey);
+            }
+        }
+        @media(max-width: 425px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+    }
+}

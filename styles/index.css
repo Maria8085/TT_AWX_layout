@@ -1,0 +1,75 @@
+@import "../media/fonts/fonts.css";
+@import "variables.css";
+@import "header.css";
+@import "switch.css";
+@import "statistic.css";
+@import "inputs.css";
+@import "radioSwitch.css";
+@import "purchaseSale.css";
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline-width: 0;
+}
+
+body {
+    font-family: 'Intel', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 320px;
+}
+
+.contentWrapper {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+
+    .statistics {
+        grid-column: span 4;
+    }
+
+    .purchaseSale {
+        grid-column: span 8;
+    }
+
+    @media (max-width: 425px) {
+        .statistics {
+            grid-column: span 6;
+        }
+
+        .purchaseSale {
+            grid-column: span 6;
+        }
+    }
+}
+
+.cashWrapper {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+    .title {
+        color: var(--dark-grey);
+        font-size: 11px;
+    }
+
+    .cash {
+        font-size: 11px;
+    }
+}
+
+
+
+
+

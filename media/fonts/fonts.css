@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Intel";
+    src:url("Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Intel-SemiBold";
+    src:url("Inter-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Intel-Medium";
+    src:url("Inter-Medium.ttf") format("truetype");
+}

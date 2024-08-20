@@ -1,0 +1,81 @@
+.statistics {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .statisticsList[data-type="rise"] {
+        --statistic-text-color: var(--green);
+        --statistic-background-color: var(--green);
+    }
+
+    .statisticsList[data-type="fall"] {
+        --statistic-text-color: var(--red);
+        --statistic-background-color: var(--red);
+    }
+
+    .statisticsLine[data-value] {
+        --line-width: calc(var(--data-value) * 1%); /* Управление шириной */
+    }
+
+    .statisticsLine {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        &:after{
+
+        }
+        &[data-value]:after{
+            display: block;
+            opacity: 10%;
+            content: "";
+            width: var(--line-width);
+            height: 100%;
+            right: 0;
+            z-index: -1;
+            position: absolute;
+            background-color: var(--statistic-background-color);
+        }
+        .availability {
+            color: var(--dark-grey);
+        }
+    }
+
+    .statisticsList {
+        color: var(--statistic-text-color);
+    }
+
+    .statisticsTitle {
+        display: flex;
+        flex-direction: column;
+
+        &:last-child {
+            text-align: end;
+        }
+
+        .title {
+            font-size: 11px;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            color: var(--dark-grey);
+        }
+    }
+
+    .amounts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+
+        .amount {
+            color: var(--red);
+            font-size: 16px;
+        }
+
+        .approximatelyAmount {
+            font-size: 12px;
+        }
+    }
+}

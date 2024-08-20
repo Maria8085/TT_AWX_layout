@@ -1,0 +1,38 @@
+.contentSwitch {
+    padding: 2px;
+    border: 1px solid var(--light-grey);
+    border-radius: 8px;
+    height: auto;
+    display: flex;
+
+    .contentSwitchItem {
+        font-family: 'Intel-SemiBold', sans-serif;
+        display: block;
+        font-size: 13px;
+        flex: 50% 1 1;
+        padding: 10px 0;
+        text-align: center;
+        border-radius: 6px;
+        color: var(--dark-grey);
+        cursor: pointer;
+
+        &.active {
+            background: var(--red);
+            color: var(--white);
+        }
+    }
+
+    &.mainSwitch {
+        margin: 5px 10px;
+
+        .contentSwitchItem {
+            color: var(--light-grey);
+
+            &.active {
+                background: var(--main-blue);
+                color: var(--white);
+
+            }
+        }
+    }
+}

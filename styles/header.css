@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-grey);
+    padding: 5px 10px;
+
+    .sectionTitle {
+        font-family: 'Intel-SemiBold', sans-serif;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .headerPercent {
+            color: var(--green);
+            font-size: 12px;
+        }
+    }
+
+    .like {
+        background-color: unset;
+        border: unset;
+        color: var(--black);
+        cursor: pointer;
+        &:hover{
+            color: var(--red);
+        }
+        &:active{
+
+        }
+        &:focus{
+
+        }
+    }
+}

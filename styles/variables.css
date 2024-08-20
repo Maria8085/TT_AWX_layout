@@ -1,0 +1,26 @@
+:root {
+    --light-grey: #dbdbdb;
+    --dark-grey: #7A7A7A;
+    --green: #24B600;
+    --main-blue: #168ACD;
+    --red: #DC3500;
+    --black: #000000;
+    --white: #ffffff;
+    --data-value: 0;
+}
+
+.animationState{
+    transition: 100ms ease-out;
+    &:hover{
+        filter: brightness(80%);
+    }
+    &.active{
+        &:hover{
+            filter: brightness(120%);
+        }
+    }
+
+    &:active{
+        transform: translateY(2px);
+    }
+}

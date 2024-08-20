@@ -1,0 +1,33 @@
+.inputWrapper{
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid var(--light-grey);
+    align-items: center;
+    transition: 100ms ease-out;
+    .controls{
+        background-color: var(--main-blue);
+        padding: 4px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        color: var(--white);
+        cursor: pointer;
+        width: 1.6rem;
+        height: 1.6rem;
+        &.minus{
+            left: 0;
+        }
+        &.plus{
+            right: 0;
+        }
+    }
+    .inputField{
+        outline-width: 0;
+        width: 100%;
+        border: none;
+        padding: 10px;
+        text-align: center;
+    }
+    &:has(.inputField:focus){
+        border-bottom: 1px solid var(--main-blue);
+    }
+}
